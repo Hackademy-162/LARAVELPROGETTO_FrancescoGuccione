@@ -1,0 +1,65 @@
+/* IMPOSTAZIONI GENERALI */
+
+/* COLORI  */
+
+:root{
+    --color-p: #CDD3D5;
+    --color-s: #00120B;
+    --color-t: #52489C;
+}
+
+.color-p{
+    color: var(--color-p);
+}
+
+.color-s{
+    color: var(--color-s);
+}
+
+.color-t{
+    color: var(--color-t);
+}
+
+/* FONTS  */
+
+.titles{
+    font-family: "Amarante", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+* {
+    font-family: "Metrophobic", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+body {
+    background-color: var(--color-p);
+}
+
+/* HOMEPAGE */
+
+/* NAVBAR */
+
+.nav-link{
+    color: var(--color-t);
+    font-weight: bold;
+}
+
+.nav-link-on{
+    background-color: rgba(0, 0, 0, 0.514);
+}
+
+/* HEADER */
+
+.main-title {
+    font-size: 60px;
+}
+
+.img-Header {
+    width: 200px;
+    height: auto;
+}
+
+
