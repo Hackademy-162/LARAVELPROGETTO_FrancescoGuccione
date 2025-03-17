@@ -16,23 +16,14 @@
     <body>
 
         {{-- navbar  --}}
-        <nav class="container">
-            <div class="d-flex justify-content-center py-3">
-                <ul class="nav nav-pills">
-                    <li class="nav-item"><a href="/" class="nav-link" aria-current="page">Home</a></li>
-                    <li class="nav-item"><a href="/scopri" class="nav-link">Scopri</a></li>
-                    <li class="nav-item"><a href="/chi-siamo" class="nav-link">Chi siamo</a></li>
-                    <li class="nav-item"><a href="/contattaci" class="nav-link nav-link-on">Contattaci</a></li>
-                </ul>
-            </div>
-        </nav>
+        <x-navbar />
 
         {{-- header  --}}
         <header>
             <div class="d-flex justify-content-center align-items-center flex-column m-5">
                 <h1 class="titles fw-bold main-title">Contattaci</h1>
             </div>
-            <div class="container-fluid p-5">
+            <div class="container p-5">
                 <div class="row">
                     <div class="col-4">
                         <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/Instagram_logo_2022.svg/1200px-Instagram_logo_2022.svg.png" alt="" width="200">

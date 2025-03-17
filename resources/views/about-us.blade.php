@@ -16,16 +16,7 @@
     <body>
 
         {{-- navbar  --}}
-        <nav class="container">
-            <div class="d-flex justify-content-center py-3">
-                <ul class="nav nav-pills">
-                    <li class="nav-item"><a href="/" class="nav-link" aria-current="page">Home</a></li>
-                    <li class="nav-item"><a href="/scopri" class="nav-link">Scopri</a></li>
-                    <li class="nav-item"><a href="/chi-siamo" class="nav-link nav-link-on">Chi siamo</a></li>
-                    <li class="nav-item"><a href="/contattaci" class="nav-link">Contattaci</a></li>
-                </ul>
-            </div>
-        </nav>
+        <x-navbar />
 
         {{-- header  --}}
         <header>

@@ -1,19 +1,12 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\GeneralController;
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', [GeneralController::class, 'homepage'])->name('homepage');
 
-Route::get('/chi-siamo', function () {
-    return view('about-us');
-});
+Route::get('/about-us', [GeneralController::class, 'secondPage'])->name('about.page');
 
-Route::get('/scopri', function () {
-    return view('discover');
-});
+Route::get('/contact-us', [GeneralController::class, 'thirdPage'])->name('contact.page');
 
-Route::get('/contattaci', function () {
-    return view('contact-us');
-});
+Route::get('/dettaglio-auto/{id}', [GeneralController::class, 'dettaglioAuto'])->name('auto.dettaglio');
