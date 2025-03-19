@@ -14,6 +14,11 @@
         <link href="https://fonts.googleapis.com/css2?family=Amarante&family=Metrophobic&display=swap" rel="stylesheet">
     </head>
     <body>
+        @if (session('message'))
+            <div class="alert alert-success">
+                {{ session('message') }}
+            </div>
+        @endif
 
         {{-- navbar  --}}
         <x-navbar />

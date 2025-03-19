@@ -10,3 +10,7 @@ Route::get('/about-us', [GeneralController::class, 'secondPage'])->name('about.p
 Route::get('/contact-us', [GeneralController::class, 'thirdPage'])->name('contact.page');
 
 Route::get('/dettaglio-auto/{id}', [GeneralController::class, 'dettaglioAuto'])->name('auto.dettaglio');
+
+Route::post('/contact-us/send', [GeneralController::class, 'store'])->name('contact.store');
+
+Route::get("/grazie", [GeneralController::class, 'thanks'])->name('thank-you'); 

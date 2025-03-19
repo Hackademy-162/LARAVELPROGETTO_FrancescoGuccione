@@ -37,9 +37,29 @@
                         <img class="mt-5" src="https://upload.wikimedia.org/wikipedia/commons/e/ef/Youtube_logo.png" alt="" width="200">
                         <p class="mt-2">@blogcar9111</p>
                     </div>
-                    <div class="col-4 mt-5">
-                        <h3>La nostra email:</h3>
-                        <p>carblogofficial@gmail.com</p>
+                </div>
+            </div>
+            <div class="container mt-5 pb-5">
+                <h2>Vuoi dirci qualcosa? Invia l email!</h2>
+                <div class="row">
+                    <div class="col-16">
+                        <form method = "POST" action = "{{ route('contact.store') }}">
+                            @csrf
+                            <div class="mb-3">
+                                <label for="mail" class="form-label">Indirizzo Email</label>
+                                <input type="email" class="form-control csInput" id="mail" aria-describedby="emailHelp" name="mail" required>
+                                <div id="emailHelp" class="form-text">Nessuno saprà della tua email tranquillo!</div>
+                            </div>
+                            <div class="mb-3">
+                                <label for="userName" class="form-label">Username</label>
+                                <input type="text" class="form-control csInput" id="userName" name="userName" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="message" class="form-label">Messaggio</label>
+                                <textarea name="message" id="message" cols="30" rows="10" placeholder="Inserisci qui il tuo messaggio" class="form-control" required></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-secondary">Invia</button>
+                        </form>
                     </div>
                 </div>
             </div>
@@ -47,6 +67,7 @@
 
         {{-- link js bootstrap  --}}
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+            
     
     </body>
 </html>
