@@ -2,9 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Contact;
+use App\Mail\ContactMail;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Mail;
-use App\Mail\ContactMail;
 
 
 class GeneralController extends Controller{
@@ -38,8 +39,13 @@ class GeneralController extends Controller{
         $userName = $req->input('userName');
         $mail = $req->input('mail');
         $message = $req->input('message');
-
         $contact = compact('userName', 'mail', 'message');
+
+        $newContact = new Contact();
+        $newContact->userName = $req->input('userName');
+        $newContact->mail = $req->input('mail');
+        $newContact->message = $req->input('message');
+        $newContact->save();
 
         Mail::to($mail)->send(new ContactMail($contact));
 
